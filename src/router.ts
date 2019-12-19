@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Apontamento from './views/Apontamento.vue'
+import Apontamentos from './views/Apontamentos.vue'
+import EditarApontamento from './views/EditarApontamentos.vue'
 
 Vue.use(Router)
 
@@ -11,7 +12,18 @@ export default new Router({
     {
       path: '/apontamentos',
       name: 'apontamentos',
-      component: Apontamento
+      component: Apontamentos
+    },
+    {
+      path: '/apontamentos/novo',
+      name: 'novo-apontamento',
+      component: EditarApontamento
+    },
+    {
+      path: '/apontamentos/:id',
+      name: 'editar-apontamento',
+      component: EditarApontamento,
+      props:true
     },
     {
       path:'*',

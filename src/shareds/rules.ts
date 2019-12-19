@@ -1,0 +1,1 @@
+export const required = (data: any) => !!data || "Campo obrigatório!"
